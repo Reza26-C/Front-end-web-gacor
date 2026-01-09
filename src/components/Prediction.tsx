@@ -35,7 +35,7 @@ const Prediction = () => {
     const loadModel = async () => {
       try {
         // Path ke model yang sudah diconvert di folder public
-        const loadedModel = await tf.loadLayersModel("/tfjs_model/model.json");
+        const loadedModel = await tf.loadLayersModel("/tfjs_model/model.json?refresh=" + new Date().getTime());
         setModel(loadedModel);
         console.log("✅ Model Loaded Successfully on Client Side");
       } catch (err) {
