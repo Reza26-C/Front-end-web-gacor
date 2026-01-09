@@ -31,15 +31,22 @@ const Prediction = () => {
   });
 
   // 3. LOAD MODEL SAAT KOMPONEN DIBUKA
-  useEffect(() => {
+  // Cari bagian useEffect ini
+useEffect(() => {
     const loadModel = async () => {
       try {
-        // Path ke model yang sudah diconvert di folder public
-        const loadedModel = await tf.loadLayersModel("/tfjs_model/model.json?refresh=" + new Date().getTime());
+        // --- UBAH BARIS DI BAWAH INI ---
+        // Kita tambahkan "?v=" + waktu sekarang agar browser TIDAK menggunakan cache lama
+        const modelUrl = "/tfjs_model/model.json?v=" + new Date().getTime();
+        
+        console.log("Sedang memuat model dari:", modelUrl); // Debugging
+        
+        const loadedModel = await tf.loadLayersModel(modelUrl);
         setModel(loadedModel);
-        console.log("✅ Model Loaded Successfully on Client Side");
+        console.log("✅ Model Loaded Successfully");
       } catch (err) {
         console.error("Gagal memuat model:", err);
+        toast({ variant: "destructive", title: "Gagal Memuat Model", description: "Cek koneksi atau cache browser Anda." });
       }
     };
     loadModel();
