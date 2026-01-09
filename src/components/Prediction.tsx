@@ -37,7 +37,7 @@ useEffect(() => {
       try {
         // --- UBAH BARIS DI BAWAH INI ---
         // Kita tambahkan "?v=" + waktu sekarang agar browser TIDAK menggunakan cache lama
-        const modelUrl = "/tfjs_model/model.json?v=" + new Date().getTime();
+        const modelUrl = "/tfjs_model/model_baru_v1.json?v=" + new Date().getTime();
         
         console.log("Sedang memuat model dari:", modelUrl); // Debugging
         
