@@ -116,7 +116,7 @@ const Prediction = () => {
           <CardHeader className="bg-secondary/50">
             <CardTitle className="flex items-center gap-2">
               <Calculator className="w-6 h-6 text-primary" />
-              Kalkulator Pertumbuhan
+              Prediksi Stunting
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-6">
@@ -230,7 +230,7 @@ const Prediction = () => {
               </div>
 
               <Button type="submit" className="w-full" size="lg" disabled={loading}>
-                {loading ? "Sedang Menghitung..." : "Hitung Hasil"}
+                {loading ? "Sedang Memprediksi" : "Prediksi"}
               </Button>
 
               {result && (
