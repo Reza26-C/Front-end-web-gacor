@@ -16,8 +16,8 @@ const Prediction = () => {
   // --- KONFIGURASI SCALER (Ganti nilai ini sesuai hasil training Anda) ---
   // Karena kita tidak memakai scaler.pkl, kita masukkan nilai mean & std secara manual
   const scalerParams = {
-    mean: [14.90277319  2.76429515 49.09078904  7.61678772 69.04057445], // Contoh: Mean untuk Age, BirthWeight, dll
-    std: [8.60481693 0.2959524  0.43457117 1.769163   9.49217264]      // Contoh: Std untuk Age, BirthWeight, dll
+    mean: [14.90277319, 2.76429515, 49.09078904, 7.61678772, 69.04057445], // Contoh: Mean untuk Age, BirthWeight, dll
+    std: [8.60481693, 0.2959524, 0.43457117, 1.769163, 9.49217264]      // Contoh: Std untuk Age, BirthWeight, dll
   };
 
   const [formData, setFormData] = useState({
